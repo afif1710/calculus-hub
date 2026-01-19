@@ -37,16 +37,43 @@ export function JsonCsvConverter() {
     }
   };
 
+  // Parse CSV line handling quoted values with commas
+  const parseCsvLine = (line: string): string[] => {
+    const result: string[] = [];
+    let current = '';
+    let inQuotes = false;
+    
+    for (let i = 0; i < line.length; i++) {
+      const char = line[i];
+      
+      if (char === '"') {
+        if (inQuotes && line[i + 1] === '"') {
+          current += '"';
+          i++; // Skip next quote
+        } else {
+          inQuotes = !inQuotes;
+        }
+      } else if (char === ',' && !inQuotes) {
+        result.push(current.trim());
+        current = '';
+      } else {
+        current += char;
+      }
+    }
+    result.push(current.trim());
+    return result;
+  };
+
   const toJson = () => {
     try {
       setError(null);
-      const lines = csvText.trim().split('\n');
+      const lines = csvText.trim().split('\n').filter(line => line.trim());
       if (lines.length < 2) throw new Error('CSV must have at least a header and one row');
       
-      const keys = lines[0].split(',').map(k => k.trim());
+      const keys = parseCsvLine(lines[0]);
       const result = lines.slice(1).map(line => {
-        const values = line.split(',');
-        return Object.fromEntries(keys.map((k, i) => [k, values[i]?.trim() ?? '']));
+        const values = parseCsvLine(line);
+        return Object.fromEntries(keys.map((k, i) => [k, values[i] ?? '']));
       });
       
       setJsonText(JSON.stringify(result, null, 2));
