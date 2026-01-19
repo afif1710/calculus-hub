@@ -5,11 +5,20 @@ import { useSearch } from '@/hooks/useSearch';
 
 interface SearchBarProps {
   onSelectCalculator: (categoryId: string, calcId: string) => void;
+  initialQuery?: string;
 }
 
-export function SearchBar({ onSelectCalculator }: SearchBarProps) {
+export function SearchBar({ onSelectCalculator, initialQuery = '' }: SearchBarProps) {
   const { query, setQuery, results, isOpen, setIsOpen, close } = useSearch();
   const inputRef = useRef<HTMLInputElement>(null);
+
+  // Handle initial query from URL
+  useEffect(() => {
+    if (initialQuery) {
+      setQuery(initialQuery);
+      setIsOpen(true);
+    }
+  }, [initialQuery, setQuery, setIsOpen]);
 
   useEffect(() => {
     if (isOpen && inputRef.current) {

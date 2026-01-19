@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Star } from 'lucide-react';
 import type { CategoryMeta } from '@/data/calculators';
 
 interface CategoryCardProps {
@@ -8,6 +8,8 @@ interface CategoryCardProps {
   onToggle: () => void;
   onSelectCalculator: (calcId: string) => void;
   selectedCalcId: string | null;
+  onToggleFavorite?: (calcId: string) => void;
+  isFavorite?: (calcId: string) => boolean;
 }
 
 export function CategoryCard({ 
@@ -15,7 +17,9 @@ export function CategoryCard({
   isExpanded, 
   onToggle, 
   onSelectCalculator,
-  selectedCalcId 
+  selectedCalcId,
+  onToggleFavorite,
+  isFavorite
 }: CategoryCardProps) {
   const Icon = category.icon;
 
@@ -62,25 +66,45 @@ export function CategoryCard({
       >
         <div className="px-5 pb-5 grid gap-2">
           {category.calculators.map((calc, i) => (
-            <motion.button
+            <motion.div
               key={calc.id}
               initial={{ opacity: 0, x: -10 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: i * 0.05 }}
-              onClick={() => onSelectCalculator(calc.id)}
-              className={`w-full p-3 rounded-xl text-left transition-all ${
-                selectedCalcId === calc.id
-                  ? 'bg-primary text-primary-foreground shadow-lg'
-                  : 'bg-secondary/50 hover:bg-secondary text-foreground'
-              }`}
+              className="flex items-center gap-2"
             >
-              <div className="font-medium">{calc.title}</div>
-              <div className={`text-sm ${
-                selectedCalcId === calc.id ? 'text-primary-foreground/80' : 'text-muted-foreground'
-              }`}>
-                {calc.description}
-              </div>
-            </motion.button>
+              <button
+                onClick={() => onSelectCalculator(calc.id)}
+                className={`flex-1 p-3 rounded-xl text-left transition-all ${
+                  selectedCalcId === calc.id
+                    ? 'bg-primary text-primary-foreground shadow-lg'
+                    : 'bg-secondary/50 hover:bg-secondary text-foreground'
+                }`}
+              >
+                <div className="font-medium">{calc.title}</div>
+                <div className={`text-sm ${
+                  selectedCalcId === calc.id ? 'text-primary-foreground/80' : 'text-muted-foreground'
+                }`}>
+                  {calc.description}
+                </div>
+              </button>
+              {onToggleFavorite && isFavorite && (
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onToggleFavorite(calc.id);
+                  }}
+                  className="p-2 rounded-lg hover:bg-secondary transition-colors shrink-0"
+                  aria-label={isFavorite(calc.id) ? 'Remove from favorites' : 'Add to favorites'}
+                >
+                  <Star
+                    className={`w-4 h-4 transition-colors ${
+                      isFavorite(calc.id) ? 'text-yellow-500 fill-yellow-500' : 'text-muted-foreground'
+                    }`}
+                  />
+                </button>
+              )}
+            </motion.div>
           ))}
         </div>
       </motion.div>
