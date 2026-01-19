@@ -52,7 +52,7 @@ export function SearchBar({ onSelectCalculator }: SearchBarProps) {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: -20 }}
               transition={{ type: 'spring', stiffness: 400, damping: 30 }}
-              className="fixed top-[15%] left-1/2 -translate-x-1/2 w-full max-w-lg z-50 p-4"
+              className="fixed inset-x-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg z-50 px-4"
             >
               <div className="glass-strong rounded-2xl shadow-2xl overflow-hidden">
                 <div className="flex items-center gap-3 px-4 py-3 border-b border-border">
