@@ -58,8 +58,8 @@ export function CalculatorModal({ isOpen, onClose, calculatorId, calculatorTitle
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            transition={{ type: 'spring', stiffness: 400, damping: 30 }}
-            className="fixed inset-4 sm:inset-auto sm:top-1/2 sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 sm:w-full sm:max-w-2xl sm:max-h-[90vh] z-50 flex flex-col"
+            transition={{ type: 'spring', stiffness: 400, damping: 30 }} 
+            className="fixed inset-4 sm:inset-auto sm:top-1/2 sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 sm:w-[calc(100%-2rem)] sm:max-w-2xl sm:max-h-[90vh] z-50 flex flex-col mx-auto"
           >
             <div className="glass-strong rounded-2xl shadow-2xl flex flex-col max-h-full overflow-hidden">
               {/* Header */}
