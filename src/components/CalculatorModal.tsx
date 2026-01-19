@@ -22,6 +22,22 @@ import { LoanEMICalculator } from './calculators/LoanEMICalculator';
 import { ROICalculator } from './calculators/ROICalculator';
 import { DurationCalculator } from './calculators/DurationCalculator';
 import { PowerCalculator } from './calculators/PowerCalculator';
+import { BasicArithmeticCalculator } from './calculators/BasicArithmeticCalculator';
+import { ScientificCalculator } from './calculators/ScientificCalculator';
+import { CurrencyConverter } from './calculators/CurrencyConverter';
+import { CalorieCounter } from './calculators/CalorieCounter';
+import { WaterIntakeCalculator } from './calculators/WaterIntakeCalculator';
+import { BodyFatCalculator } from './calculators/BodyFatCalculator';
+import { UnixTimestampCalculator } from './calculators/UnixTimestampCalculator';
+import { HashGenerator } from './calculators/HashGenerator';
+import { ProbabilityCalculator } from './calculators/ProbabilityCalculator';
+import { MeanMedianCalculator } from './calculators/MeanMedianCalculator';
+import { StdDeviationCalculator } from './calculators/StdDeviationCalculator';
+import { TimezoneConverter } from './calculators/TimezoneConverter';
+import { LEDResistorCalculator } from './calculators/LEDResistorCalculator';
+import { CookingConverter } from './calculators/CookingConverter';
+import { ExposureCalculator } from './calculators/ExposureCalculator';
+import { PrintSizeCalculator } from './calculators/PrintSizeCalculator';
 
 const calculatorComponents: Record<string, React.FC> = {
   mortgage: MortgageCalculator,
@@ -50,6 +66,22 @@ const calculatorComponents: Record<string, React.FC> = {
   roi: ROICalculator,
   duration: DurationCalculator,
   power: PowerCalculator,
+  basic_arithmetic: BasicArithmeticCalculator,
+  scientific: ScientificCalculator,
+  currency: CurrencyConverter,
+  calories: CalorieCounter,
+  water_intake: WaterIntakeCalculator,
+  body_fat: BodyFatCalculator,
+  unix_timestamp: UnixTimestampCalculator,
+  hash_generator: HashGenerator,
+  probability: ProbabilityCalculator,
+  mean_median: MeanMedianCalculator,
+  std_deviation: StdDeviationCalculator,
+  timezone: TimezoneConverter,
+  led_resistor: LEDResistorCalculator,
+  cooking: CookingConverter,
+  exposure: ExposureCalculator,
+  print_size: PrintSizeCalculator,
 };
 
 interface CalculatorModalProps {
