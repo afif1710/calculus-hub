@@ -1,6 +1,7 @@
 import { 
   Calculator, DollarSign, Activity, Code, Camera, 
-  BarChart3, Ruler, Clock, Zap, Percent
+  BarChart3, Ruler, Clock, Zap, Percent, TrendingUp,
+  Building2, ShoppingCart, Leaf, GraduationCap
 } from 'lucide-react';
 
 export interface CalculatorMeta {
@@ -33,6 +34,7 @@ export const categories: CategoryMeta[] = [
       { id: 'matrix', title: 'Matrix Multiplier', description: 'Multiply 2x2 and 3x3 matrices', keywords: ['matrix', 'linear algebra', 'multiply'], complexity: 'advanced' },
       { id: 'percentage', title: 'Percentage Calculator', description: 'Calculate percentages and changes', keywords: ['percent', 'percentage', 'increase', 'decrease'], complexity: 'simple' },
       { id: 'scientific', title: 'Scientific Calculator', description: 'Trigonometry, logarithms, powers', keywords: ['sin', 'cos', 'tan', 'log', 'power', 'sqrt'], complexity: 'advanced' },
+      { id: 'final_grade', title: 'Final Grade Needed', description: 'Calculate grade needed on final exam', keywords: ['grade', 'final', 'exam', 'academic', 'gpa', 'school'], complexity: 'simple' },
     ]
   },
   {
@@ -47,6 +49,48 @@ export const categories: CategoryMeta[] = [
       { id: 'tip', title: 'Tip Calculator', description: 'Split bills and calculate tips', keywords: ['tip', 'bill', 'split', 'restaurant'], complexity: 'simple' },
       { id: 'currency', title: 'Currency Converter', description: 'Convert between currencies', keywords: ['currency', 'exchange', 'forex', 'convert'], complexity: 'simple' },
       { id: 'roi', title: 'ROI Calculator', description: 'Return on investment analysis', keywords: ['roi', 'return', 'investment', 'profit'], complexity: 'simple' },
+    ]
+  },
+  {
+    id: 'digital_marketing',
+    title: 'Digital Marketing',
+    icon: TrendingUp,
+    description: 'ROI, engagement, analytics',
+    color: 'from-pink-500 to-rose-500',
+    calculators: [
+      { id: 'engagement_rate', title: 'Engagement Rate', description: 'Calculate social media engagement', keywords: ['engagement', 'social', 'likes', 'comments', 'followers', 'instagram', 'tiktok'], complexity: 'simple' },
+    ]
+  },
+  {
+    id: 'real_estate',
+    title: 'Real Estate',
+    icon: Building2,
+    description: 'Property investment analysis',
+    color: 'from-amber-500 to-orange-500',
+    calculators: [
+      { id: 'rental_yield', title: 'Rental Yield', description: 'Annual return on rental property', keywords: ['rental', 'yield', 'property', 'landlord', 'investment'], complexity: 'simple' },
+      { id: 'cap_rate', title: 'Cap Rate', description: 'Capitalization rate for properties', keywords: ['cap', 'rate', 'capitalization', 'noi', 'property'], complexity: 'simple' },
+    ]
+  },
+  {
+    id: 'business',
+    title: 'Business & E-commerce',
+    icon: ShoppingCart,
+    description: 'Break-even, margins, pricing',
+    color: 'from-violet-500 to-purple-500',
+    calculators: [
+      { id: 'break_even', title: 'Break-Even Point', description: 'Units needed to cover costs', keywords: ['break', 'even', 'profit', 'loss', 'units', 'business'], complexity: 'simple' },
+      { id: 'profit_margin', title: 'Profit Margin', description: 'Calculate profit and markup', keywords: ['profit', 'margin', 'markup', 'cost', 'pricing'], complexity: 'simple' },
+    ]
+  },
+  {
+    id: 'sustainability',
+    title: 'Sustainability',
+    icon: Leaf,
+    description: 'Carbon footprint & eco impact',
+    color: 'from-green-500 to-teal-500',
+    calculators: [
+      { id: 'co2_flight', title: 'CO2 Flight Impact', description: 'Calculate flight carbon emissions', keywords: ['co2', 'carbon', 'flight', 'emissions', 'climate', 'environment', 'plane'], complexity: 'simple' },
     ]
   },
   {

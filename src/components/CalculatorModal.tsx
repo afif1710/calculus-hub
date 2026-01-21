@@ -38,6 +38,14 @@ import { LEDResistorCalculator } from './calculators/LEDResistorCalculator';
 import { CookingConverter } from './calculators/CookingConverter';
 import { ExposureCalculator } from './calculators/ExposureCalculator';
 import { PrintSizeCalculator } from './calculators/PrintSizeCalculator';
+// New niche calculators
+import { EngagementRateCalculator } from './calculators/EngagementRateCalculator';
+import { RentalYieldCalculator } from './calculators/RentalYieldCalculator';
+import { CapRateCalculator } from './calculators/CapRateCalculator';
+import { BreakEvenCalculator } from './calculators/BreakEvenCalculator';
+import { ProfitMarginCalculator } from './calculators/ProfitMarginCalculator';
+import { CO2FlightCalculator } from './calculators/CO2FlightCalculator';
+import { FinalGradeCalculator } from './calculators/FinalGradeCalculator';
 
 const calculatorComponents: Record<string, React.FC> = {
   mortgage: MortgageCalculator,
@@ -82,6 +90,14 @@ const calculatorComponents: Record<string, React.FC> = {
   cooking: CookingConverter,
   exposure: ExposureCalculator,
   print_size: PrintSizeCalculator,
+  // New niche calculators
+  engagement_rate: EngagementRateCalculator,
+  rental_yield: RentalYieldCalculator,
+  cap_rate: CapRateCalculator,
+  break_even: BreakEvenCalculator,
+  profit_margin: ProfitMarginCalculator,
+  co2_flight: CO2FlightCalculator,
+  final_grade: FinalGradeCalculator,
 };
 
 interface CalculatorModalProps {
