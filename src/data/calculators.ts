@@ -76,11 +76,16 @@ export const categories: CategoryMeta[] = [
     id: 'business',
     title: 'Business & E-commerce',
     icon: ShoppingCart,
-    description: 'Break-even, margins, pricing',
+    description: 'Break-even, margins, pricing, analytics',
     color: 'from-violet-500 to-purple-500',
     calculators: [
       { id: 'break_even', title: 'Break-Even Point', description: 'Units needed to cover costs', keywords: ['break', 'even', 'profit', 'loss', 'units', 'business'], complexity: 'simple' },
       { id: 'profit_margin', title: 'Profit Margin', description: 'Calculate profit and markup', keywords: ['profit', 'margin', 'markup', 'cost', 'pricing'], complexity: 'simple' },
+      { id: 'cac', title: 'Customer Acquisition Cost', description: 'Cost to acquire each customer', keywords: ['cac', 'customer', 'acquisition', 'marketing', 'cost'], complexity: 'simple' },
+      { id: 'roas', title: 'ROAS Calculator', description: 'Return on ad spend ratio', keywords: ['roas', 'return', 'ad', 'spend', 'advertising', 'marketing'], complexity: 'simple' },
+      { id: 'aov', title: 'Average Order Value', description: 'Average revenue per order', keywords: ['aov', 'average', 'order', 'value', 'revenue'], complexity: 'simple' },
+      { id: 'inventory_turnover', title: 'Inventory Turnover', description: 'How fast inventory sells', keywords: ['inventory', 'turnover', 'cogs', 'stock', 'warehouse'], complexity: 'simple' },
+      { id: 'conversion_rate', title: 'Conversion Rate', description: 'Visitor to customer conversion', keywords: ['conversion', 'rate', 'visitors', 'sales', 'ecommerce'], complexity: 'simple' },
     ]
   },
   {

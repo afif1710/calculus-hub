@@ -46,6 +46,12 @@ import { BreakEvenCalculator } from './calculators/BreakEvenCalculator';
 import { ProfitMarginCalculator } from './calculators/ProfitMarginCalculator';
 import { CO2FlightCalculator } from './calculators/CO2FlightCalculator';
 import { FinalGradeCalculator } from './calculators/FinalGradeCalculator';
+// Business & E-commerce calculators
+import { CACCalculator } from './calculators/CACCalculator';
+import { ROASCalculator } from './calculators/ROASCalculator';
+import { AOVCalculator } from './calculators/AOVCalculator';
+import { InventoryTurnoverCalculator } from './calculators/InventoryTurnoverCalculator';
+import { ConversionRateCalculator } from './calculators/ConversionRateCalculator';
 
 const calculatorComponents: Record<string, React.FC> = {
   mortgage: MortgageCalculator,
@@ -98,6 +104,12 @@ const calculatorComponents: Record<string, React.FC> = {
   profit_margin: ProfitMarginCalculator,
   co2_flight: CO2FlightCalculator,
   final_grade: FinalGradeCalculator,
+  // Business & E-commerce calculators
+  cac: CACCalculator,
+  roas: ROASCalculator,
+  aov: AOVCalculator,
+  inventory_turnover: InventoryTurnoverCalculator,
+  conversion_rate: ConversionRateCalculator,
 };
 
 interface CalculatorModalProps {
