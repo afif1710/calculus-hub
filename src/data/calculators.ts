@@ -1,7 +1,7 @@
 import { 
   Calculator, DollarSign, Activity, Code, Camera, 
   BarChart3, Ruler, Clock, Zap, Percent, TrendingUp,
-  Building2, ShoppingCart, Leaf, GraduationCap
+  Building2, ShoppingCart, Leaf, GraduationCap, Home, Car, Briefcase
 } from 'lucide-react';
 
 export interface CalculatorMeta {
@@ -33,8 +33,12 @@ export const categories: CategoryMeta[] = [
       { id: 'fraction', title: 'Fraction Calculator', description: 'Operations on fractions with simplification', keywords: ['fraction', 'numerator', 'denominator', 'simplify'], complexity: 'simple' },
       { id: 'matrix', title: 'Matrix Multiplier', description: 'Multiply 2x2 and 3x3 matrices', keywords: ['matrix', 'linear algebra', 'multiply'], complexity: 'advanced' },
       { id: 'percentage', title: 'Percentage Calculator', description: 'Calculate percentages and changes', keywords: ['percent', 'percentage', 'increase', 'decrease'], complexity: 'simple' },
+      { id: 'percent_change', title: 'Percent Change', description: 'Increase, decrease & difference', keywords: ['percent', 'change', 'increase', 'decrease', 'difference'], complexity: 'simple' },
       { id: 'scientific', title: 'Scientific Calculator', description: 'Trigonometry, logarithms, powers', keywords: ['sin', 'cos', 'tan', 'log', 'power', 'sqrt'], complexity: 'advanced' },
-      { id: 'final_grade', title: 'Final Grade Needed', description: 'Calculate grade needed on final exam', keywords: ['grade', 'final', 'exam', 'academic', 'gpa', 'school'], complexity: 'simple' },
+      { id: 'quadratic', title: 'Quadratic Solver', description: 'Find roots and discriminant', keywords: ['quadratic', 'equation', 'roots', 'discriminant', 'polynomial'], complexity: 'simple' },
+      { id: 'gcd_lcm', title: 'GCD / LCM', description: 'Greatest common divisor & least common multiple', keywords: ['gcd', 'lcm', 'divisor', 'multiple', 'factor'], complexity: 'simple' },
+      { id: 'gpa', title: 'GPA Calculator', description: 'Calculate GPA with credits', keywords: ['gpa', 'cgpa', 'grade', 'college', 'academic', 'credits'], complexity: 'simple' },
+      { id: 'final_grade', title: 'Final Grade Needed', description: 'Calculate grade needed on final exam', keywords: ['grade', 'final', 'exam', 'academic', 'school'], complexity: 'simple' },
     ]
   },
   {
@@ -44,7 +48,12 @@ export const categories: CategoryMeta[] = [
     description: 'Loans, investments, taxes',
     color: 'from-green-500 to-emerald-500',
     calculators: [
+      { id: 'simple_interest', title: 'Simple Interest', description: 'Calculate simple interest', keywords: ['simple', 'interest', 'principal', 'rate', 'time'], complexity: 'simple' },
       { id: 'compound_interest', title: 'Compound Interest', description: 'Calculate compound interest growth', keywords: ['compound', 'interest', 'investment', 'savings'], complexity: 'simple' },
+      { id: 'cagr', title: 'CAGR Calculator', description: 'Compound annual growth rate', keywords: ['cagr', 'growth', 'annual', 'return', 'investment'], complexity: 'simple' },
+      { id: 'sip', title: 'SIP Calculator', description: 'Monthly investment returns', keywords: ['sip', 'mutual', 'fund', 'monthly', 'investment'], complexity: 'simple' },
+      { id: 'inflation', title: 'Inflation Calculator', description: 'Future & present value', keywords: ['inflation', 'purchasing', 'power', 'future', 'value'], complexity: 'simple' },
+      { id: 'credit_card', title: 'Credit Card Payoff', description: 'Payoff time and interest', keywords: ['credit', 'card', 'payoff', 'debt', 'interest', 'apr'], complexity: 'advanced' },
       { id: 'mortgage', title: 'Mortgage / EMI', description: 'Loan payments with amortization schedule', keywords: ['mortgage', 'emi', 'loan', 'home', 'payment'], complexity: 'advanced' },
       { id: 'tip', title: 'Tip Calculator', description: 'Split bills and calculate tips', keywords: ['tip', 'bill', 'split', 'restaurant'], complexity: 'simple' },
       { id: 'currency', title: 'Currency Converter', description: 'Convert between currencies', keywords: ['currency', 'exchange', 'forex', 'convert'], complexity: 'simple' },
@@ -59,6 +68,11 @@ export const categories: CategoryMeta[] = [
     color: 'from-pink-500 to-rose-500',
     calculators: [
       { id: 'engagement_rate', title: 'Engagement Rate', description: 'Calculate social media engagement', keywords: ['engagement', 'social', 'likes', 'comments', 'followers', 'instagram', 'tiktok'], complexity: 'simple' },
+      { id: 'cpm', title: 'CPM Calculator', description: 'Cost per thousand impressions', keywords: ['cpm', 'cost', 'impressions', 'advertising', 'mille'], complexity: 'simple' },
+      { id: 'cpc', title: 'CPC Calculator', description: 'Cost per click', keywords: ['cpc', 'cost', 'click', 'advertising', 'ppc'], complexity: 'simple' },
+      { id: 'ctr', title: 'CTR Calculator', description: 'Click-through rate', keywords: ['ctr', 'click', 'through', 'rate', 'impressions'], complexity: 'simple' },
+      { id: 'cpa', title: 'CPA Calculator', description: 'Cost per acquisition', keywords: ['cpa', 'cost', 'acquisition', 'conversion'], complexity: 'simple' },
+      { id: 'breakeven_cpa', title: 'Break-even CPA', description: 'Max CPA from AOV & margin', keywords: ['breakeven', 'cpa', 'aov', 'margin', 'profit'], complexity: 'simple' },
     ]
   },
   {
@@ -70,6 +84,8 @@ export const categories: CategoryMeta[] = [
     calculators: [
       { id: 'rental_yield', title: 'Rental Yield', description: 'Annual return on rental property', keywords: ['rental', 'yield', 'property', 'landlord', 'investment'], complexity: 'simple' },
       { id: 'cap_rate', title: 'Cap Rate', description: 'Capitalization rate for properties', keywords: ['cap', 'rate', 'capitalization', 'noi', 'property'], complexity: 'simple' },
+      { id: 'rent_vs_buy', title: 'Rent vs Buy', description: 'Compare renting vs buying', keywords: ['rent', 'buy', 'compare', 'home', 'mortgage'], complexity: 'advanced' },
+      { id: 'mortgage_afford', title: 'Mortgage Affordability', description: 'How much home can you afford', keywords: ['mortgage', 'affordability', 'income', 'dti', 'loan'], complexity: 'advanced' },
     ]
   },
   {
@@ -109,6 +125,8 @@ export const categories: CategoryMeta[] = [
       { id: 'calories', title: 'Calorie Counter', description: 'Track daily calorie intake', keywords: ['calorie', 'food', 'nutrition', 'diet'], complexity: 'simple' },
       { id: 'water_intake', title: 'Water Intake', description: 'Daily water requirement calculator', keywords: ['water', 'hydration', 'drink'], complexity: 'simple' },
       { id: 'body_fat', title: 'Body Fat %', description: 'Estimate body fat percentage', keywords: ['body fat', 'fitness', 'composition'], complexity: 'advanced' },
+      { id: 'one_rep_max', title: 'One Rep Max', description: 'Estimate 1RM from reps', keywords: ['1rm', 'one', 'rep', 'max', 'strength', 'lifting'], complexity: 'simple' },
+      { id: 'calorie_deficit', title: 'Calorie Deficit', description: 'Weight loss timeline', keywords: ['calorie', 'deficit', 'weight', 'loss', 'diet', 'tdee'], complexity: 'simple' },
     ]
   },
   {
@@ -120,9 +138,46 @@ export const categories: CategoryMeta[] = [
     calculators: [
       { id: 'json_csv', title: 'JSON ↔ CSV', description: 'Convert between JSON and CSV formats', keywords: ['json', 'csv', 'convert', 'data', 'format'], complexity: 'advanced' },
       { id: 'subnet', title: 'Subnet Calculator', description: 'CIDR to netmask conversion', keywords: ['subnet', 'cidr', 'ip', 'network', 'netmask'], complexity: 'advanced' },
-      { id: 'base_converter', title: 'Base Converter', description: 'Convert between number bases', keywords: ['binary', 'hex', 'decimal', 'octal', 'base'], complexity: 'simple' },
+      { id: 'base64', title: 'Base64 Encode/Decode', description: 'Encode and decode Base64', keywords: ['base64', 'encode', 'decode', 'string'], complexity: 'simple' },
+      { id: 'url_encoder', title: 'URL Encode/Decode', description: 'Encode and decode URLs', keywords: ['url', 'encode', 'decode', 'uri', 'percent'], complexity: 'simple' },
+      { id: 'jwt_decoder', title: 'JWT Decoder', description: 'Decode JWT tokens', keywords: ['jwt', 'token', 'decode', 'json', 'auth'], complexity: 'simple' },
+      { id: 'uuid', title: 'UUID Generator', description: 'Generate UUID v4', keywords: ['uuid', 'guid', 'unique', 'id', 'generate'], complexity: 'simple' },
       { id: 'unix_timestamp', title: 'Unix Timestamp', description: 'Convert Unix timestamps', keywords: ['unix', 'timestamp', 'epoch', 'date', 'time'], complexity: 'simple' },
       { id: 'hash_generator', title: 'Hash Generator', description: 'Generate MD5, SHA hashes', keywords: ['hash', 'md5', 'sha', 'checksum'], complexity: 'advanced' },
+    ]
+  },
+  {
+    id: 'home_diy',
+    title: 'Home & DIY',
+    icon: Home,
+    description: 'Paint, flooring, concrete, projects',
+    color: 'from-orange-500 to-red-500',
+    calculators: [
+      { id: 'paint', title: 'Paint Calculator', description: 'Gallons needed for room', keywords: ['paint', 'wall', 'room', 'gallon', 'coverage'], complexity: 'simple' },
+      { id: 'flooring', title: 'Flooring/Tiles', description: 'Tiles needed with waste', keywords: ['flooring', 'tile', 'floor', 'square', 'feet'], complexity: 'simple' },
+      { id: 'concrete', title: 'Concrete Volume', description: 'Cubic yards and bags needed', keywords: ['concrete', 'cement', 'slab', 'cubic', 'yard'], complexity: 'simple' },
+    ]
+  },
+  {
+    id: 'automotive',
+    title: 'Automotive',
+    icon: Car,
+    description: 'Fuel, mileage, car loans',
+    color: 'from-slate-500 to-zinc-500',
+    calculators: [
+      { id: 'fuel_efficiency', title: 'Fuel Efficiency', description: 'Convert MPG, km/L, L/100km', keywords: ['fuel', 'efficiency', 'mpg', 'mileage', 'consumption'], complexity: 'simple' },
+      { id: 'fuel', title: 'Trip Fuel Cost', description: 'Calculate trip fuel costs', keywords: ['fuel', 'gas', 'petrol', 'trip', 'cost'], complexity: 'simple' },
+    ]
+  },
+  {
+    id: 'hr_salary',
+    title: 'HR & Salary',
+    icon: Briefcase,
+    description: 'Pay, overtime, take-home',
+    color: 'from-indigo-500 to-purple-500',
+    calculators: [
+      { id: 'salary', title: 'Salary Converter', description: 'Hourly ↔ annual salary', keywords: ['salary', 'hourly', 'annual', 'pay', 'wage'], complexity: 'simple' },
+      { id: 'take_home', title: 'Take-Home Pay', description: 'Net pay after tax', keywords: ['take', 'home', 'net', 'tax', 'gross', 'salary'], complexity: 'simple' },
     ]
   },
   {
@@ -195,7 +250,6 @@ export const categories: CategoryMeta[] = [
     color: 'from-lime-500 to-green-500',
     calculators: [
       { id: 'discount', title: 'Discount Calculator', description: 'Calculate sale prices and savings', keywords: ['discount', 'sale', 'price', 'savings', 'percent off'], complexity: 'simple' },
-      { id: 'fuel', title: 'Fuel Cost', description: 'Calculate trip fuel costs', keywords: ['fuel', 'gas', 'petrol', 'mileage', 'mpg'], complexity: 'simple' },
       { id: 'cooking', title: 'Cooking Converter', description: 'Recipe unit conversions', keywords: ['cooking', 'recipe', 'cups', 'tablespoon', 'teaspoon'], complexity: 'simple' },
     ]
   },
