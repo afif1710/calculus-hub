@@ -15,10 +15,8 @@ import { UnitConverter } from './calculators/UnitConverter';
 import { SimpleInterestCalculator } from './calculators/SimpleInterestCalculator';
 import { DiscountCalculator } from './calculators/DiscountCalculator';
 import { Base64Calculator } from './calculators/Base64Calculator';
-import { AspectRatioCalculator } from './calculators/AspectRatioCalculator';
 import { OhmsLawCalculator } from './calculators/OhmsLawCalculator';
 import { FuelCostCalculator } from './calculators/FuelCostCalculator';
-import { LoanEMICalculator } from './calculators/LoanEMICalculator';
 import { ROICalculator } from './calculators/ROICalculator';
 import { DurationCalculator } from './calculators/DurationCalculator';
 import { PowerCalculator } from './calculators/PowerCalculator';
@@ -38,7 +36,6 @@ import { LEDResistorCalculator } from './calculators/LEDResistorCalculator';
 import { CookingConverter } from './calculators/CookingConverter';
 import { ExposureCalculator } from './calculators/ExposureCalculator';
 import { PrintSizeCalculator } from './calculators/PrintSizeCalculator';
-// New niche calculators
 import { EngagementRateCalculator } from './calculators/EngagementRateCalculator';
 import { RentalYieldCalculator } from './calculators/RentalYieldCalculator';
 import { CapRateCalculator } from './calculators/CapRateCalculator';
@@ -46,12 +43,38 @@ import { BreakEvenCalculator } from './calculators/BreakEvenCalculator';
 import { ProfitMarginCalculator } from './calculators/ProfitMarginCalculator';
 import { CO2FlightCalculator } from './calculators/CO2FlightCalculator';
 import { FinalGradeCalculator } from './calculators/FinalGradeCalculator';
-// Business & E-commerce calculators
 import { CACCalculator } from './calculators/CACCalculator';
 import { ROASCalculator } from './calculators/ROASCalculator';
 import { AOVCalculator } from './calculators/AOVCalculator';
 import { InventoryTurnoverCalculator } from './calculators/InventoryTurnoverCalculator';
 import { ConversionRateCalculator } from './calculators/ConversionRateCalculator';
+// New calculators
+import { QuadraticCalculator } from './calculators/QuadraticCalculator';
+import { GPACalculator } from './calculators/GPACalculator';
+import { PercentChangeCalculator } from './calculators/PercentChangeCalculator';
+import { GCDLCMCalculator } from './calculators/GCDLCMCalculator';
+import { CAGRCalculator } from './calculators/CAGRCalculator';
+import { SIPCalculator } from './calculators/SIPCalculator';
+import { InflationCalculator } from './calculators/InflationCalculator';
+import { CreditCardPayoffCalculator } from './calculators/CreditCardPayoffCalculator';
+import { CPMCalculator } from './calculators/CPMCalculator';
+import { CPCCalculator } from './calculators/CPCCalculator';
+import { CTRCalculator } from './calculators/CTRCalculator';
+import { CPACalculator } from './calculators/CPACalculator';
+import { BreakevenCPACalculator } from './calculators/BreakevenCPACalculator';
+import { RentVsBuyCalculator } from './calculators/RentVsBuyCalculator';
+import { MortgageAffordabilityCalculator } from './calculators/MortgageAffordabilityCalculator';
+import { OneRepMaxCalculator } from './calculators/OneRepMaxCalculator';
+import { CalorieDeficitCalculator } from './calculators/CalorieDeficitCalculator';
+import { URLEncoderCalculator } from './calculators/URLEncoderCalculator';
+import { JWTDecoderCalculator } from './calculators/JWTDecoderCalculator';
+import { UUIDGenerator } from './calculators/UUIDGenerator';
+import { PaintCalculator } from './calculators/PaintCalculator';
+import { FlooringCalculator } from './calculators/FlooringCalculator';
+import { ConcreteCalculator } from './calculators/ConcreteCalculator';
+import { SalaryCalculator } from './calculators/SalaryCalculator';
+import { TakeHomePayCalculator } from './calculators/TakeHomePayCalculator';
+import { FuelEfficiencyCalculator } from './calculators/FuelEfficiencyCalculator';
 
 const calculatorComponents: Record<string, React.FC> = {
   mortgage: MortgageCalculator,
@@ -72,11 +95,9 @@ const calculatorComponents: Record<string, React.FC> = {
   volume: UnitConverter,
   simple_interest: SimpleInterestCalculator,
   discount: DiscountCalculator,
-  base_converter: Base64Calculator,
-  aspect_ratio: AspectRatioCalculator,
+  base64: Base64Calculator,
   ohms_law: OhmsLawCalculator,
   fuel: FuelCostCalculator,
-  loan_emi: LoanEMICalculator,
   roi: ROICalculator,
   duration: DurationCalculator,
   power: PowerCalculator,
@@ -96,7 +117,6 @@ const calculatorComponents: Record<string, React.FC> = {
   cooking: CookingConverter,
   exposure: ExposureCalculator,
   print_size: PrintSizeCalculator,
-  // New niche calculators
   engagement_rate: EngagementRateCalculator,
   rental_yield: RentalYieldCalculator,
   cap_rate: CapRateCalculator,
@@ -104,12 +124,38 @@ const calculatorComponents: Record<string, React.FC> = {
   profit_margin: ProfitMarginCalculator,
   co2_flight: CO2FlightCalculator,
   final_grade: FinalGradeCalculator,
-  // Business & E-commerce calculators
   cac: CACCalculator,
   roas: ROASCalculator,
   aov: AOVCalculator,
   inventory_turnover: InventoryTurnoverCalculator,
   conversion_rate: ConversionRateCalculator,
+  // New calculators
+  quadratic: QuadraticCalculator,
+  gpa: GPACalculator,
+  percent_change: PercentChangeCalculator,
+  gcd_lcm: GCDLCMCalculator,
+  cagr: CAGRCalculator,
+  sip: SIPCalculator,
+  inflation: InflationCalculator,
+  credit_card: CreditCardPayoffCalculator,
+  cpm: CPMCalculator,
+  cpc: CPCCalculator,
+  ctr: CTRCalculator,
+  cpa: CPACalculator,
+  breakeven_cpa: BreakevenCPACalculator,
+  rent_vs_buy: RentVsBuyCalculator,
+  mortgage_afford: MortgageAffordabilityCalculator,
+  one_rep_max: OneRepMaxCalculator,
+  calorie_deficit: CalorieDeficitCalculator,
+  url_encoder: URLEncoderCalculator,
+  jwt_decoder: JWTDecoderCalculator,
+  uuid: UUIDGenerator,
+  paint: PaintCalculator,
+  flooring: FlooringCalculator,
+  concrete: ConcreteCalculator,
+  salary: SalaryCalculator,
+  take_home: TakeHomePayCalculator,
+  fuel_efficiency: FuelEfficiencyCalculator,
 };
 
 interface CalculatorModalProps {
