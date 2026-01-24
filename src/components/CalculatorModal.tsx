@@ -48,7 +48,7 @@ import { ROASCalculator } from './calculators/ROASCalculator';
 import { AOVCalculator } from './calculators/AOVCalculator';
 import { InventoryTurnoverCalculator } from './calculators/InventoryTurnoverCalculator';
 import { ConversionRateCalculator } from './calculators/ConversionRateCalculator';
-// New calculators
+// Existing calculators
 import { QuadraticCalculator } from './calculators/QuadraticCalculator';
 import { GPACalculator } from './calculators/GPACalculator';
 import { PercentChangeCalculator } from './calculators/PercentChangeCalculator';
@@ -75,6 +75,13 @@ import { ConcreteCalculator } from './calculators/ConcreteCalculator';
 import { SalaryCalculator } from './calculators/SalaryCalculator';
 import { TakeHomePayCalculator } from './calculators/TakeHomePayCalculator';
 import { FuelEfficiencyCalculator } from './calculators/FuelEfficiencyCalculator';
+// New calculators
+import { LoanComparisonCalculator } from './calculators/LoanComparisonCalculator';
+import { SalaryRaiseCalculator } from './calculators/SalaryRaiseCalculator';
+import { MortgageRefinanceCalculator } from './calculators/MortgageRefinanceCalculator';
+import { PricingCalculator } from './calculators/PricingCalculator';
+import { ReorderPointCalculator } from './calculators/ReorderPointCalculator';
+import { CronExpressionCalculator } from './calculators/CronExpressionCalculator';
 
 const calculatorComponents: Record<string, React.FC> = {
   mortgage: MortgageCalculator,
@@ -89,10 +96,8 @@ const calculatorComponents: Record<string, React.FC> = {
   percentage: PercentageCalculator,
   tip: TipCalculator,
   age: AgeCalculator,
-  length: UnitConverter,
-  weight: UnitConverter,
-  temperature: UnitConverter,
-  volume: UnitConverter,
+  // All-in-one Unit Converter
+  unit_converter: UnitConverter,
   simple_interest: SimpleInterestCalculator,
   discount: DiscountCalculator,
   base64: Base64Calculator,
@@ -129,7 +134,7 @@ const calculatorComponents: Record<string, React.FC> = {
   aov: AOVCalculator,
   inventory_turnover: InventoryTurnoverCalculator,
   conversion_rate: ConversionRateCalculator,
-  // New calculators
+  // Existing calculators
   quadratic: QuadraticCalculator,
   gpa: GPACalculator,
   percent_change: PercentChangeCalculator,
@@ -156,6 +161,13 @@ const calculatorComponents: Record<string, React.FC> = {
   salary: SalaryCalculator,
   take_home: TakeHomePayCalculator,
   fuel_efficiency: FuelEfficiencyCalculator,
+  // New calculators
+  loan_comparison: LoanComparisonCalculator,
+  salary_raise: SalaryRaiseCalculator,
+  mortgage_refinance: MortgageRefinanceCalculator,
+  pricing: PricingCalculator,
+  reorder_point: ReorderPointCalculator,
+  cron: CronExpressionCalculator,
 };
 
 interface CalculatorModalProps {
