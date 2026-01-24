@@ -55,6 +55,8 @@ export const categories: CategoryMeta[] = [
       { id: 'inflation', title: 'Inflation Calculator', description: 'Future & present value', keywords: ['inflation', 'purchasing', 'power', 'future', 'value'], complexity: 'simple' },
       { id: 'credit_card', title: 'Credit Card Payoff', description: 'Payoff time and interest', keywords: ['credit', 'card', 'payoff', 'debt', 'interest', 'apr'], complexity: 'advanced' },
       { id: 'mortgage', title: 'Mortgage / EMI', description: 'Loan payments with amortization schedule', keywords: ['mortgage', 'emi', 'loan', 'home', 'payment'], complexity: 'advanced' },
+      { id: 'loan_comparison', title: 'Loan Comparison', description: 'Compare 2-4 loans side by side', keywords: ['compare', 'loans', 'emi', 'comparison', 'best', 'loan', 'total', 'interest'], complexity: 'advanced' },
+      { id: 'salary_raise', title: 'Salary Raise Impact', description: 'Calculate raise and tax impact', keywords: ['salary', 'raise', 'increment', 'pay', 'increase', 'after', 'tax'], complexity: 'simple' },
       { id: 'tip', title: 'Tip Calculator', description: 'Split bills and calculate tips', keywords: ['tip', 'bill', 'split', 'restaurant'], complexity: 'simple' },
       { id: 'currency', title: 'Currency Converter', description: 'Convert between currencies', keywords: ['currency', 'exchange', 'forex', 'convert'], complexity: 'simple' },
       { id: 'roi', title: 'ROI Calculator', description: 'Return on investment analysis', keywords: ['roi', 'return', 'investment', 'profit'], complexity: 'simple' },
@@ -86,6 +88,7 @@ export const categories: CategoryMeta[] = [
       { id: 'cap_rate', title: 'Cap Rate', description: 'Capitalization rate for properties', keywords: ['cap', 'rate', 'capitalization', 'noi', 'property'], complexity: 'simple' },
       { id: 'rent_vs_buy', title: 'Rent vs Buy', description: 'Compare renting vs buying', keywords: ['rent', 'buy', 'compare', 'home', 'mortgage'], complexity: 'advanced' },
       { id: 'mortgage_afford', title: 'Mortgage Affordability', description: 'How much home can you afford', keywords: ['mortgage', 'affordability', 'income', 'dti', 'loan'], complexity: 'advanced' },
+      { id: 'mortgage_refinance', title: 'Mortgage Refinance', description: 'Analyze refinance savings', keywords: ['refinance', 'mortgage', 'break', 'even', 'interest', 'saved'], complexity: 'advanced' },
     ]
   },
   {
@@ -97,6 +100,8 @@ export const categories: CategoryMeta[] = [
     calculators: [
       { id: 'break_even', title: 'Break-Even Point', description: 'Units needed to cover costs', keywords: ['break', 'even', 'profit', 'loss', 'units', 'business'], complexity: 'simple' },
       { id: 'profit_margin', title: 'Profit Margin', description: 'Calculate profit and markup', keywords: ['profit', 'margin', 'markup', 'cost', 'pricing'], complexity: 'simple' },
+      { id: 'pricing', title: 'Pricing Calculator', description: 'Markup vs margin pricing', keywords: ['pricing', 'markup', 'margin', 'selling', 'price', 'profit'], complexity: 'simple' },
+      { id: 'reorder_point', title: 'Inventory Reorder Point', description: 'When to reorder stock', keywords: ['reorder', 'point', 'inventory', 'planning', 'safety', 'stock', 'lead', 'time'], complexity: 'simple' },
       { id: 'cac', title: 'Customer Acquisition Cost', description: 'Cost to acquire each customer', keywords: ['cac', 'customer', 'acquisition', 'marketing', 'cost'], complexity: 'simple' },
       { id: 'roas', title: 'ROAS Calculator', description: 'Return on ad spend ratio', keywords: ['roas', 'return', 'ad', 'spend', 'advertising', 'marketing'], complexity: 'simple' },
       { id: 'aov', title: 'Average Order Value', description: 'Average revenue per order', keywords: ['aov', 'average', 'order', 'value', 'revenue'], complexity: 'simple' },
@@ -144,6 +149,7 @@ export const categories: CategoryMeta[] = [
       { id: 'uuid', title: 'UUID Generator', description: 'Generate UUID v4', keywords: ['uuid', 'guid', 'unique', 'id', 'generate'], complexity: 'simple' },
       { id: 'unix_timestamp', title: 'Unix Timestamp', description: 'Convert Unix timestamps', keywords: ['unix', 'timestamp', 'epoch', 'date', 'time'], complexity: 'simple' },
       { id: 'hash_generator', title: 'Hash Generator', description: 'Generate MD5, SHA hashes', keywords: ['hash', 'md5', 'sha', 'checksum'], complexity: 'advanced' },
+      { id: 'cron', title: 'Cron Expression Helper', description: 'Generate cron schedules', keywords: ['cron', 'scheduler', 'cron', 'generator', 'linux', 'crontab'], complexity: 'simple' },
     ]
   },
   {
@@ -212,10 +218,7 @@ export const categories: CategoryMeta[] = [
     description: 'Length, weight, temperature, volume',
     color: 'from-teal-500 to-cyan-500',
     calculators: [
-      { id: 'length', title: 'Length Converter', description: 'Convert between length units', keywords: ['length', 'meter', 'feet', 'inch', 'mile', 'km'], complexity: 'simple' },
-      { id: 'weight', title: 'Weight Converter', description: 'Convert between weight units', keywords: ['weight', 'kg', 'pound', 'ounce', 'gram'], complexity: 'simple' },
-      { id: 'temperature', title: 'Temperature Converter', description: 'Celsius, Fahrenheit, Kelvin', keywords: ['temperature', 'celsius', 'fahrenheit', 'kelvin'], complexity: 'simple' },
-      { id: 'volume', title: 'Volume Converter', description: 'Liters, gallons, cups, ml', keywords: ['volume', 'liter', 'gallon', 'cup', 'ml'], complexity: 'simple' },
+      { id: 'unit_converter', title: 'Unit Converter (All-in-One)', description: 'Length, weight, temperature, volume', keywords: ['length', 'meter', 'feet', 'inch', 'mile', 'km', 'weight', 'kg', 'pound', 'ounce', 'gram', 'lbs', 'temperature', 'celsius', 'fahrenheit', 'kelvin', 'volume', 'liter', 'gallon', 'cup', 'ml', 'liters', 'gallons', 'converter'], complexity: 'simple' },
     ]
   },
   {
